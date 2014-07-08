@@ -24,15 +24,31 @@ public class MainActivity extends ActionBarActivity{
         setContentView(R.layout.activity_main);
 
         Button button1= (Button) findViewById(R.id.button1);
+        Button button2= (Button) findViewById(R.id.button2);
+        Button button3= (Button) findViewById(R.id.button3);
+
         View.OnClickListener l = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "bal al", Toast.LENGTH_SHORT).show();
-                createNotification();
+                switch (view.getId())
+                {
+                    case R.id.button1:
+                        Toast.makeText(getApplicationContext(), "bal al", Toast.LENGTH_SHORT).show();
+                        createNotification();
+                        break;
+                    case R.id.button2:
+                        Toast.makeText(getApplicationContext(), "ciska w chuj", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.button3:
+                        Toast.makeText(getApplicationContext(), "ciska w chuuuuuuj", Toast.LENGTH_SHORT).show();
+                        break;
+                }
 
             }
         };
         button1.setOnClickListener(l);
+        button2.setOnClickListener(l);
+        button3.setOnClickListener(l);
     }
 
 
